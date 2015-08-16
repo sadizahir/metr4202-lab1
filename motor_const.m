@@ -8,6 +8,4 @@ mC_GR = int32(1/1);
 mP = 50; % motor power
 
 % Link Lengths %
-l1 = 63;
-l2 = 174;
-l3 = 120;
+L1 = 64; L2=174; L3=125;  %Arm link Lengths
