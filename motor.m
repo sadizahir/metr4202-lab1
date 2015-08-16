@@ -1,3 +1,7 @@
+global mA;
+global mB;
+global mC;
+
 h = COM_OpenNXT(); % Open connection to NXT
 COM_SetDefaultNXT(h); %Set default handle
 mA = NXTMotor('A');

@@ -2,6 +2,17 @@
 % their respective angles.
 function motor_angles(t1, t2, t3)
 
+global mA;
+global mB;
+global mC;
+global mA_GR;
+global mB_GR;
+global mC_GR;
+global mP;
+global L1;
+global L2;
+global L3;
+
 % For the first and second joints, the gearing makes the motor behaviour
 % opposite. So we make the motor go forward (gear goes backward) for
 % negative angles and backward (gear goes forward) for positive angles.
@@ -12,6 +23,7 @@ if t1 < 0
     motor_forward(mA, mA_GR, t1);
 else
     motor_backward(mA, mA_GR, t1);
+end
 
 % Second joint: Positive angles move down, negative angles move up.
 if t2 < 0
@@ -19,6 +31,7 @@ if t2 < 0
     motor_forward(mB, mB_GR, t2);
 else
     motor_backward(mB, mB_GR, t2);
+end
 
 % Third joint: this one doesn't have any gears connected to it. As a
 % result, the behaviour is normal (negative angles move the motor "back",
@@ -29,3 +42,4 @@ if t3 < 0
     motor_backward(mC, mC_GR, t3);
 else
     motor_forward(mC, mC_GR, t3);
+end
