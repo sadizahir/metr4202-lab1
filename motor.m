@@ -14,5 +14,4 @@ mC = NXTMotor('C');
 mC.SmoothStart = true;
 mC.SpeedRegulation = false;
 
-% chuck code here
 %COM_CloseNXT(COM_GetDefaultNXT());  % close connection to NXT

@@ -1,6 +1,8 @@
 %Inverse kinematics
 function angles = inv_kine(x, y, z)
-L1 = 64; L2=174; L3=125;  %Arm link Lengths
+global L1;
+global L2;
+global L3;
 theta1 = atand(x/y);
 a = sqrt(x^2 + y^2);
 b = sqrt((a-L1)^2 + z^2);

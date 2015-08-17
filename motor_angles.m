@@ -16,9 +16,9 @@ global mA_pos;
 global mB_pos;
 global mC_pos;
 
-mA_pos = mA_pos + t1;
-mB_pos = mB_pos + t2;
-mC_pos = mC_pos + t3;
+%mA_pos = mA_pos + t1;
+%mB_pos = mB_pos + t2;
+%mC_pos = mC_pos + t3;
 
 epsilon = 1;
 
@@ -33,6 +33,7 @@ if t1 < -epsilon
 elseif t1 > epsilon
     motor_backward(mA, mA_GR, t1);
 end
+
 
 % Second joint: Positive angles move down, negative angles move up.
 if t2 < -epsilon
@@ -52,3 +53,10 @@ if t3 < -epsilon
 elseif t3 > epsilon
     motor_forward(mC, mC_GR, t3);
 end
+
+mA.WaitFor();
+mA_pos = mA.ReadFromNXT.Position / -mA_GR;
+mB.WaitFor();
+mB_pos = mB.ReadFromNXT.Position / -mB_GR;
+mC.WaitFor();
+mC_pos = mC.ReadFromNXT.Position / mC_GR;
