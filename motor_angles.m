@@ -21,7 +21,7 @@ global L3;
 if t1 < 0
     t1 = -t1;
     motor_forward(mA, mA_GR, t1);
-else
+elseif t1 > 0
     motor_backward(mA, mA_GR, t1);
 end
 
@@ -29,7 +29,7 @@ end
 if t2 < 0
     t2 = -t2;
     motor_forward(mB, mB_GR, t2);
-else
+elseif t2 > 0
     motor_backward(mB, mB_GR, t2);
 end
 
@@ -40,6 +40,6 @@ end
 if t3 < 0
     t3 = -t3;
     motor_backward(mC, mC_GR, t3);
-else
+elseif t3 > 0
     motor_forward(mC, mC_GR, t3);
 end
