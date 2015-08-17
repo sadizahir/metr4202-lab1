@@ -20,20 +20,11 @@ global mC_pos;
 %mB_pos = mB_pos + t2;
 %mC_pos = mC_pos + t3;
 
-epsilon = 1;
+epsilon = 0.5;
 
 % For the first and second joints, the gearing makes the motor behaviour
 % opposite. So we make the motor go forward (gear goes backward) for
 % negative angles and backward (gear goes forward) for positive angles.
-
-% First joint: Positive angles move right, negative angles move left.
-if t1 < -epsilon
-    t1 = -t1;
-    motor_forward(mA, mA_GR, t1);
-elseif t1 > epsilon
-    motor_backward(mA, mA_GR, t1);
-end
-
 
 % Second joint: Positive angles move down, negative angles move up.
 if t2 < -epsilon
@@ -42,6 +33,7 @@ if t2 < -epsilon
 elseif t2 > epsilon
     motor_backward(mB, mB_GR, t2);
 end
+%mB.WaitFor();
 
 % Third joint: this one doesn't have any gears connected to it. As a
 % result, the behaviour is normal (negative angles move the motor "back",
@@ -53,6 +45,17 @@ if t3 < -epsilon
 elseif t3 > epsilon
     motor_forward(mC, mC_GR, t3);
 end
+%mC.WaitFor();
+%mB.WaitFor();
+
+% First joint: Positive angles move right, negative angles move left.
+if t1 < -epsilon
+    t1 = -t1;
+    motor_forward(mA, mA_GR, t1);
+elseif t1 > epsilon
+    motor_backward(mA, mA_GR, t1);
+end
+mA.WaitFor();
 
 mA.WaitFor();
 mA_pos = mA.ReadFromNXT.Position / -mA_GR;

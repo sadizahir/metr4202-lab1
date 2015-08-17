@@ -19,8 +19,8 @@ mP = 50;
 
 % Link Lengths %
 L1 = 64;
-L2 = 155;
-L3 = 165;
+L2 = 175;
+L3 = 170;
 
 % Initial motor positions
 mA_pos = 0;
