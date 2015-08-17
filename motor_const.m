@@ -1,6 +1,9 @@
 global mA_GR;
 global mB_GR;
 global mC_GR;
+global mA_pos;
+global mB_pos;
+global mC_pos;
 global mP;
 global L1;
 global L2;
@@ -16,3 +19,8 @@ mP = 50; % motor power
 L1 = 64;
 L2=174;
 L3=125;
+
+% Initial motor positions
+mA_pos = 0;
+mB_pos = 0;
+mC_pos = 0;
