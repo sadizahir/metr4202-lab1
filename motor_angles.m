@@ -12,6 +12,13 @@ global mP;
 global L1;
 global L2;
 global L3;
+global mA_pos;
+global mB_pos;
+global mC_pos;
+
+mA_pos = mA_pos + t1;
+mB_pos = mB_pos + t2;
+mC_pos = mC_pos + t3;
 
 % For the first and second joints, the gearing makes the motor behaviour
 % opposite. So we make the motor go forward (gear goes backward) for
