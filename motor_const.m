@@ -21,10 +21,10 @@ mP = 50;
 
 % Link Lengths %
 L1 = 64;
-L2 = 178;
+L2 = 154;
 L3 = 194;
-Lt = 35;
-zt = 35;
+Lt = 33;
+zt = 43;
 
 % Initial motor positions
 mA_pos = 0;
