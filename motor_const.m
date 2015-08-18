@@ -24,7 +24,7 @@ L1 = 64;
 L2 = 154;
 L3 = 194;
 Lt = 33;
-zt = 43;
+zt = 35;
 
 % Initial motor positions
 mA_pos = 0;
