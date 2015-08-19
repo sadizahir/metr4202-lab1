@@ -5,16 +5,15 @@
 %
 
 %copy points from point generator
-points=[1, 4, 1; 2, 4, 1; 6, 2, 1; 7, 2, 2; 6, 5, 3; 9, 4, 5; ];
+points=[5, 1, 1; 3, 1, 2; 3, 4, 4; 2, 8, 1];
 
-%initialise cuurent_coord matrix
-current_coord = zeros(6,3);
+global mP;
 
 %loop through each point
 for i=1:length(points)
-    %convert point from HLU to mm (NB X and Y are flipped)
-    current_coord(i,:) = convert(points(i,2),points(i,1),points(i,3))
-    
-    %move motor
-    motor_to(current_coord(i,1), current_coord(i,2), current_coord(i,3))
+    motor_to_hlu(points(i,1), points(i,2), points(i,3));
+    motor_flick;
+    mP = 100;
+    motor_angle_set(0, 0, 0);
+    mP = 70;
 end

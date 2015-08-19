@@ -12,12 +12,12 @@ global Lt;
 global zt;
 
 % Gear Ratios %
-mA_GR = int32(55/8);
-mB_GR = int32(40/8);
-mC_GR = int32(40/8);
+mA_GR = round(55/8);
+mB_GR = round(40/8);
+mC_GR = round(40/8);
 
 % motor power
-mP = 50;
+mP = 70;
 
 % Link Lengths %
 L1 = 64;

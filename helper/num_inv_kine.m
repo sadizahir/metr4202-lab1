@@ -1,6 +1,6 @@
 function result = num_inv_kine(x, y, z)
-epsilon = 2; % tolerance %
-i = atand(y/x);
+epsilon = 2.5; % tolerance %
+i = round(atand(y/x));
 for j = 0:150
     for k = 0:150
         result = fkine_simpl(i, j, k);
