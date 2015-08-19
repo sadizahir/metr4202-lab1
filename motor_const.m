@@ -20,7 +20,7 @@ mB_GR = 40/8;
 mC_GR = 40/8;
 
 % motor power
-mP_max = 80;
+mP_max = 100;
 mP_drop = 100;
 mP = mP_max;
 

@@ -1,9 +1,5 @@
 function motor_to(x, y, z)
-% Moves the end-effector to x, y, z (general co-ordinates) RELATIVE TO
-% current positioning of the end-effector.
-
-% Convert HLU co-ordinates to real co-ordinates.
-% cpos = convert(x, y, z);
+% Moves the end-effector to x, y, z (general co-ordinates).
 
 % Perform inverse kinematics on the real co-ordinates to find desired joint
 % angles.

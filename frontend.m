@@ -5,7 +5,7 @@
 %
 
 %copy points from point generator
-points=[1, 2, 1; 2, 2, 1; 0, 4, 2; 9, 0, 2; 5, 5, 2; 2, 5, 3; ];
+points=[0, 5, 3; 0, 0, 3; 9, 0, 3; 9, 5, 3; ];
 points=sortrows(points, 1);
 global mP;
 global mA_pos;
@@ -23,5 +23,5 @@ for i=1:length(points)
     %current_pos = fkine_simpl(mA_pos, mB_pos, mC_pos);
     %motor_to_hlu(desired_pos(1), desired_pos(2), desired_pos(3));
 end
+points = flipud(points);
 end
-%motor_angle_set(0, 0, 0);

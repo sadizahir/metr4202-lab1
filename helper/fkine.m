@@ -1,10 +1,13 @@
 function fk_ans = fkine(a, b, c)
 % Calculates forward kinematics on angles a, b, c.
+
+% Uncomment the following block in order to get a symbolic fkine.
 %syms a;
 %syms b;
 %syms c;
 
 % Grab the global link lengths.
+% What these mean is described in motor_const.m.
 global L1;
 global L2;
 global L3;
