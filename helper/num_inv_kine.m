@@ -1,8 +1,8 @@
 function result = num_inv_kine(x, y, z)
 epsilon = 2.5; % tolerance %
 i = round(atand(y/x));
-for j = 0:150
-    for k = 0:150
+for j = 0:180
+    for k = 0:180
         result = fkine_simpl(i, j, k);
         if abs(result(1)-x) < epsilon
             if abs(result(2)-y) < epsilon
@@ -14,3 +14,5 @@ for j = 0:150
         end
     end
 end
+result = [0;0;0];
+return;

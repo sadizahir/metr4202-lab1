@@ -1,8 +1,8 @@
 %Converts the given path coordinates into mm 
 function coordinates = convert(x, y, z)
-x_d = 65+50;
-y_d = 155;
-z_d = 150;
+x_d = 65+45;
+y_d = 165;
+z_d = 155-15;
 hlutomm_xy = 32;
 hlutomm_z = 18.5;
 x_new = (x*hlutomm_xy) + x_d;

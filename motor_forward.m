@@ -2,5 +2,5 @@ function motor_forward(motor, gear_ratio, angle)
 % Moves a given motor "forward"
 global mP;
 motor.Power = mP;
-motor.TachoLimit = int32(angle*gear_ratio);
+motor.TachoLimit = ceil(angle*gear_ratio);
 motor.SendToNXT();
