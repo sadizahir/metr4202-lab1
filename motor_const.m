@@ -4,7 +4,7 @@ global mC_GR;
 global mA_pos;
 global mB_pos;
 global mC_pos;
-global mP;
+global mP; 
 global mP_max;
 global mP_drop;
 global L1;
