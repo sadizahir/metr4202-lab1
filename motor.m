@@ -1,3 +1,4 @@
+% handlers for the three motors
 global mA;
 global mB;
 global mC;
@@ -14,4 +15,5 @@ mC = NXTMotor('C');
 mC.SmoothStart = true;
 mC.SpeedRegulation = false;
 
+% copy this if you need to close the connection
 %COM_CloseNXT(COM_GetDefaultNXT());  % close connection to NXT
