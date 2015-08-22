@@ -1,8 +1,6 @@
-%Converts the given path coordinates into mm 
+% Converts the given path coordinates into mm, using conversion offsets
+% specified in the matrix c.
 function coordinates = convert(x, y, z, c)
-% x_d = 100;
-% y_d = 168;
-% z_d = 158-10;
 x_d = c(1);
 y_d = c(2);
 z_d = c(3);
